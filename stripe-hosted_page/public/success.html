@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thanks for your order!</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+  <section>
+    
+    <div id="paymentIntentId">Payment Intent ID: </div>
+
+    <p>
+      We appreciate your business! If you have any questions, please email
+      <a href="mailto:orders@example.com">orders@example.com</a>.
+    </p>
+  </section>
+
+  <script>
+    // Function to extract query parameters from the URL
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // Get the payment_intent_id from the URL
+    const paymentIntentId = getQueryParam("payment_intent_id");
+    console.log("paymentIntentId: " + paymentIntentId); 
+
+    // Display the payment_intent_id in the HTML page
+    const paymentIntentIdElement = document.getElementById("paymentIntentId");
+        if (paymentIntentIdElement) {
+            paymentIntentIdElement.textContent += paymentIntentId;
+        }
+    // // Display the payment_intent_id in the HTML page
+    // const paymentIntentIdElement = document.getElementById("paymentIntentId");
+    // console.log("paymentIntentIdElement: " + paymentIntentIdElement); 
+    // if (paymentIntentIdElement) {
+    //     paymentIntentIdElement.textContent += paymentIntentId;
+    // }
+</script>
+
+</body>
+</html>
