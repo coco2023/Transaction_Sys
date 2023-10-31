@@ -76,7 +76,7 @@ h2 {
   word-wrap: break-word;
   /* or alternatively */
   overflow-wrap: break-word;  
-  max-width: 300px; /* Set an appropriate max-width for your layout. Adjust as needed. */
+  max-width: 230px; /* Set an appropriate max-width for your layout. Adjust as needed. */
   text-align: right;
 }
 .id-value {
