@@ -35,14 +35,45 @@ $(document).ready(function () {
       function displayCheckoutDetails(data) {
         // Create HTML content to display the details
         const detailsHTML = `
-                        <h2>Checkout Session Details</h2>
-                        <p>ID: ${data.id}</p>
-                        <p>Payment Intent ID: ${data.payment_intent}</p>
-                        <p>Object: ${data.object}</p>
-                        <p>Customer: ${data.customer_details.name}</p>
-                        <p>Customer Email: ${data.customer_email}</p>
-                        <p>Customer ID: ${data.metadata.custom_id}</p>
-                        <p>Order ID: ${data.metadata.custom_order_id}</p>
+                  <div class="session-details">
+                      <h2>Checkout Session Details</h2>
+                      
+                      <div class="detail-item">
+                          <span class="description">ID:</span>
+                          <span class="value id-value">${data.id}</span>
+                      </div>
+                      
+                      <div class="detail-item">
+                          <span class="description">Payment Intent ID:</span>
+                          <span class="value">${data.payment_intent}</span>
+                      </div>
+                      
+                      <div class="detail-item">
+                          <span class="description">Object:</span>
+                          <span class="value">${data.object}</span>
+                      </div>
+                      
+                      <div class="detail-item">
+                          <span class="description">Customer:</span>
+                          <span class="value">${data.customer_details.name}</span>
+                      </div>
+                      
+                      <div class="detail-item">
+                          <span class="description">Customer Email:</span>
+                          <span class="value">${data.customer_email}</span>
+                      </div>
+                      
+                      <div class="detail-item">
+                          <span class="description">Customer ID:</span>
+                          <span class="value">${data.metadata.custom_id}</span>
+                      </div>
+                      
+                      <div class="detail-item">
+                          <span class="description">Order ID:</span>
+                          <span class="value">${data.metadata.custom_order_id}</span>
+                      </div>
+                </div>
+
                     `;
 
         // Update the 'order-details' div with the details
