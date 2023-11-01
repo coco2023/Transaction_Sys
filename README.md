@@ -31,10 +31,10 @@ node Server.js
 
 4. Demo:
    - product-details-page
-   ![product-details-page](./pic/page-demo/product-details-page.png)
+   ![product-details-page](./stripe-hosted-page-customer-checkout/pic/page-demo/product-details-page.png)
    - checkout-page
-    ![checkout-page](./pic/page-demo/checkout-page.png)
+    ![checkout-page](./stripe-hosted-page-customer-checkout/pic/page-demo/checkout-page.png)
    - successfully-checkout-page
-    ![successfully-checkout-page](./pic/page-demo/successfully-checkout-page.png)
+    ![successfully-checkout-page](./stripe-hosted-page-customer-checkout/pic/page-demo/successfully-checkout-page.png)
    - download-receipt
-    ![download-receipt](./pic/page-demo/download-receipt.png)
+    ![download-receipt](./stripe-hosted-page-customer-checkout/pic/page-demo/download-receipt.png)
