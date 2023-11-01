@@ -1,6 +1,6 @@
-# Accept a Payment with Stripe Checkout
+# stripe-hosted-page-customer-checkout
 
-This prject is the order-checkout process using Stripe Payment.
+This project is the order-checkout process using Stripe Payment. 
 
 ## Running the sample
 
