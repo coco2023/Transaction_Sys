@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.product-image {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info {
+    flex: 2;
+    padding: 20px;
+}
+
+.rating {
+    display: inline-block;
+    color: #f87e29;
+    margin: 10px 0;
+}
+
+.description {
+    margin: 20px 0;
+}
+
+.price {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.product-options {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.option-button {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-button:hover {
+    background-color: #f4f4f4;
+}
+
+.submit-order {
+    padding: 15px 30px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-order:hover {
+    background-color: #555;
+}
+
+.product-options {
+    display: flex;
+    gap: 3px;
+    justify-content: flex-start;
+}
+
+.option-label {
+    position: relative;
+    border: 3px solid transparent;  
+    padding: 0px;  /* Adjusted padding */
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.option-label input[type="radio"] {
+    display: none;
+}
+
+.option-label input[type="radio"] {
+    display: none;
+}
+
+.product-wrapper {
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+    text-align: center;
+}
+
+.product-image {
+    display: block;
+    width: 120px;  /* Adjusted size */
+    height: auto;
+    border: 3px solid transparent;  /* Transparent border to keep the size consistent */
+    transition: border-color 0.3s;
+}
+
+.option-label:hover .product-wrapper {
+    border-color: #ddd; /* Light gray border on hover */
+}
+
+.option-label input[type="radio"]:checked + .product-wrapper {
+    border-color: black;  /* Black border when selected */
+}
+
+.product-description {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* New styles for custom price option */
+.custom-price-option {
+    display: flex;
+    align-items: center;  /* Vertically center the custom price contents */
+    padding: 0 10px;  /* Add some horizontal padding */
+}
+
+.custom-price-container {
+    display: flex;
+    gap: 10px;  /* Space between label and input */
+    width: 100%;  /* Take full width of the container */
+    justify-content: center;  /* Horizontally center the content */
+}
+
+.custom-price-label {
+    margin: 0;
+    font-size: 0.9em;  /* Slightly smaller font for label */
+    white-space: nowrap;  /* Prevent label text from wrapping */
+}
+
+#customPrice {
+    flex-grow: 1;  /* Allow input to take available space */
+    padding: 5px;  /* Some padding for visual comfort */
+    border-radius: 5px;  /* Rounded corners for input */
+}

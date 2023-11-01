@@ -1,0 +1,19 @@
+{
+  "name": "stripe-hosted-page-customer-checkout",
+  "version": "1.0.0",
+  "description": "Stripe Checkout is the fastest way to get started with payments. Included are some basic build and run scripts you can use to start up the application.",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "stripe": "^14.2.0"
+  }
+}

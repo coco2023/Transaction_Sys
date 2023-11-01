@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product-details-style.css">
+    <title>Product Details</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="product-image">
+            <img src="https://p9.itc.cn/q_70/images03/20230725/f00f781f18c3436083de53f999ce6654.jpeg" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h1>Donate UmiUni !</h1>
+            <span class="rating"> ⭐⭐⭐⭐⭐ 6.66 ( Wish you all the best! ) </span>
+            <p class="description">
+                Thank you to all who have generously donated to UmiUni.  🌳🌸🌟<br>
+                Your kindness not only supports our mission but also reinforces the belief that together 👭💜🌼 <br>
+                we can make a big difference! 💪🚀🎯<br>
+                Here's to a brighter and unified future! 🌊💙💖💫💌
+            </p>
+            <form id="checkout-form" method="POST" action="/create-checkout-session">
+
+                <p class="price" id="displayPrice"></p>
+
+                <div class="product-options">
+                    <label class="option-label">
+                        <input type="radio" name="totalPrice" value="1000" checked>
+                        <div class="product-wrapper">
+                            <img src="/pic/test-product01.jpg" alt="Brown Bag"
+                                class="product-image">
+                            <span class="product-description">$10.00</span>
+                        </div>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="totalPrice" value="5000">
+                        <div class="product-wrapper">
+                            <img src="http://pic.enorth.com.cn/005/007/154/00500715496_e4b9c075.png" alt="Black Bag"
+                                class="product-image">
+                            <span class="product-description">$50.00</span>
+                        </div>
+
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="totalPrice" value="10000">
+                        <div class="product-wrapper">
+                            <img src="https://inews.gtimg.com/om_bt/OulEPZqTuYgSUe1sup0B5VtZ7bGeukZjaDuWg0W6VGunkAA/641" alt="Orange Bag"
+                                class="product-image">
+                            <span class="product-description">$50.00</span>
+                        </div>
+
+                    </label>
+                    <div class="option-label custom-price-option">
+                        <div class="custom-price-container">
+                            <label for="customPrice" class="custom-price-label">Customize Price ($ cent)<br>
+                                <input type="text" id="customPrice" name="customPrice"
+                                    placeholder="Enter custom price $ cent">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-order">Submit Order</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Grab all the radio buttons
+            let radioButtons = document.querySelectorAll('input[type="radio"][name="totalPrice"]');
+            let customPriceInput = document.getElementById('customPrice');
+
+            function updatePrice() {
+                let price = this.value;
+                if (this === customPriceInput) {
+                    // If it's the custom input, uncheck the radio buttons
+                    radioButtons.forEach(radio => radio.checked = false);
+                }
+                document.getElementById('displayPrice').textContent = "$" + (price / 100).toFixed(2);
+            }
+
+            radioButtons.forEach(function (radio) {
+                radio.addEventListener('change', updatePrice);
+            });
+
+            customPriceInput.addEventListener('input', updatePrice);
+
+            // Display the default checked value on page load
+            document.querySelector('input[type="radio"][name="totalPrice"]:checked').dispatchEvent(new Event('change'));
+        });
+    </script>
+
+</body>
+
+</html>

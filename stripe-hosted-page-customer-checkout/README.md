@@ -14,6 +14,11 @@ mvn package
 
 ~~~
 java -cp target/sample-jar-with-dependencies.jar com.stripe.sample.Server
+
+or:
+
+node Server.js
+
 ~~~
 
-3. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
+3. Go to [http://localhost:4242/product-details.html](http://localhost:4242/product-details.html)
