@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-image {
+    display: flex;
+    width: 60%; /* Adjust as needed */
+}
+
+.product-image-small {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Adjust as needed */
+}
+
+.product-image-small img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-image-overview {
+    width: 50%; /* Adjust as needed */
+}
+
+.product-image-overview img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    width: 40%; /* Adjust as needed */
+}

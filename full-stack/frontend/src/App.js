@@ -5,6 +5,7 @@ import ProductDetails from './components/productDetails/ProductDetails';
 import CancelPage from './components/canclePage/CancelPage';
 import Navigation from './components/navigation/Navigation';
 import SuccessPage from './components/successPage/SuccessPage';
+import Prac from './components/prac/prac';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<ProductDetails />} />
         <Route path="/cancel" element={<CancelPage />} />
         <Route path='/success' element={<SuccessPage />} />
+        <Route path='/prac' element={<Prac />} />
       </Routes>
     </Router>
   );

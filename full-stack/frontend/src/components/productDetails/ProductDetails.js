@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./product-details-style.css";
+import "./styles2.css";
 
 const ProductDetails = () => {
   // State for the selected price and custom price
@@ -24,14 +24,21 @@ const ProductDetails = () => {
     <div className="container">
       <div className="product-image">
         <div className="product-image-small">
-          <img
-            src="https://p9.itc.cn/q_70/images03/20230725/f00f781f18c3436083de53f999ce6654.jpeg"
-            alt="Big Image"
-          />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
         </div>
         <div className="product-image-overview">
           <img
-            src="https://p9.itc.cn/q_70/images03/20230725/f00f781f18c3436083de53f999ce6654.jpeg"
+            src="/assets/img/img_overview/1.jpg"
             alt="Small Image"
           />
         </div>
