@@ -23,10 +23,18 @@ const ProductDetails = () => {
   return (
     <div className="container">
       <div className="product-image">
-        <img
-          src="https://p9.itc.cn/q_70/images03/20230725/f00f781f18c3436083de53f999ce6654.jpeg"
-          alt="Product"
-        />
+        <div className="product-image-small">
+          <img
+            src="https://p9.itc.cn/q_70/images03/20230725/f00f781f18c3436083de53f999ce6654.jpeg"
+            alt="Big Image"
+          />
+        </div>
+        <div className="product-image-overview">
+          <img
+            src="https://p9.itc.cn/q_70/images03/20230725/f00f781f18c3436083de53f999ce6654.jpeg"
+            alt="Small Image"
+          />
+        </div>
       </div>
       <div className="product-info">
         <h1>Donate UmiUni !</h1>
@@ -44,7 +52,11 @@ const ProductDetails = () => {
           Here's to a brighter and unified future! 🌊💙💖💫💌
         </p>
 
-        <form id="checkout-form" method="POST" action="http://localhost:4242/create-checkout-session">
+        <form
+          id="checkout-form"
+          method="POST"
+          action="http://localhost:4242/create-checkout-session"
+        >
           <p className="price" id="displayPrice">
             ${(totalPrice === "custom" ? customPrice : totalPrice) / 100}
           </p>
@@ -61,7 +73,7 @@ const ProductDetails = () => {
               <div className="product-wrapper">
                 <img
                   src="https://inews.gtimg.com/om_bt/OulEPZqTuYgSUe1sup0B5VtZ7bGeukZjaDuWg0W6VGunkAA/641"
-                  className="product-image"
+                  className="product-image-right"
                 />
                 <span className="product-description">$10.00</span>
               </div>
@@ -79,7 +91,7 @@ const ProductDetails = () => {
                 <img
                   src="http://pic.enorth.com.cn/005/007/154/00500715496_e4b9c075.png"
                   alt="Brown Bag"
-                  className="product-image"
+                  className="product-image-right"
                 />
                 <span className="product-description">$50.00</span>
               </div>
@@ -97,7 +109,7 @@ const ProductDetails = () => {
                 <img
                   src="https://inews.gtimg.com/om_bt/OulEPZqTuYgSUe1sup0B5VtZ7bGeukZjaDuWg0W6VGunkAA/641"
                   alt="test-pic"
-                  className="product-image"
+                  className="product-image-right"
                 />
                 <span className="product-description">$100.00</span>
               </div>

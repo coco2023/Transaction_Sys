@@ -78,7 +78,7 @@ const SuccessPage = () => {
   };
 
   return (
-    <div className="card">
+    <div className="card" >
       <div
         style={{
           borderRadius: "200px",
@@ -90,83 +90,75 @@ const SuccessPage = () => {
       >
         <i className="checkmark">✓</i>
       </div>
-      <h1>Success</h1>
-      <section>
-        {checkoutDetails ? (
-          <div id="checkout-details">
-            <div class="session-details">
-              <h2>Checkout Session Details</h2>
+      <h1 className="successPage_h1">Success</h1>
+      <button
+        id="download-btn"
+        className="download-btn"
+        onClick={handleDownload}
+      >
+        ⬇️ Download Receipt
+      </button>
+      <br />
+      <br />
 
-              <div class="detail-item">
-                <span class="description">ID</span>
-                <span class="value id-value">{checkoutDetails.id}</span>
-              </div>
+      {checkoutDetails ? (
+        <div id="checkout-details" className="checkout-details">
+          <div class="session-details">
+            <h2>Checkout Session Details</h2>
 
-              <div class="detail-item">
-                <span class="description">Payment Intent ID</span>
-                <span class="value">{checkoutDetails.payment_intent}</span>
-              </div>
+            <div class="detail-item">
+              <span class="description">ID</span>
+              <span class="value id-value">{checkoutDetails.id}</span>
+            </div>
 
-              <div class="detail-item">
-                <span class="description">Object</span>
-                <span class="value">{checkoutDetails.object}</span>
-              </div>
+            <div class="detail-item">
+              <span class="description">Payment Intent ID</span>
+              <span class="value">{checkoutDetails.payment_intent}</span>
+            </div>
 
-              <div class="detail-item">
-                <span class="description">Customer</span>
-                <span class="value">
-                  {checkoutDetails.customer_details.name}
-                </span>
-              </div>
+            <div class="detail-item">
+              <span class="description">Customer</span>
+              <span class="value">{checkoutDetails.customer_details.name}</span>
+            </div>
 
-              <div class="detail-item">
-                <span class="description">Customer Email</span>
-                <span class="value">{checkoutDetails.customer_email}</span>
-              </div>
+            <div class="detail-item">
+              <span class="description">Customer Email</span>
+              <span class="value">{checkoutDetails.customer_email}</span>
+            </div>
 
-              <div class="detail-item">
-                <span class="description">Customer ID</span>
-                <span class="value">{checkoutDetails.metadata.custom_id}</span>
-              </div>
+            <div class="detail-item">
+              <span class="description">Customer ID</span>
+              <span class="value">{checkoutDetails.metadata.custom_id}</span>
+            </div>
 
-              <div class="detail-item">
-                <span class="description">Order ID</span>
-                <span class="value">
-                  {checkoutDetails.metadata.custom_order_id}
-                </span>
-              </div>
+            <div class="detail-item">
+              <span class="description">Order ID</span>
+              <span class="value">
+                {checkoutDetails.metadata.custom_order_id}
+              </span>
+            </div>
 
-              <div class="detail-item">
-                <span class="description">Subtotal (Cents)</span>
-                <span class="value">{checkoutDetails.amount_subtotal}</span>
-              </div>
+            <div class="detail-item-button">
+              <span class="description">Subtotal (Cents)</span>
+              <span class="value">{checkoutDetails.amount_subtotal}</span>
+            </div>
 
-              <div class="detail-item">
-                <span class="description">Total (Cents)</span>
-                <span class="value">{checkoutDetails.amount_total}</span>
-              </div>
+            <div class="detail-item">
+              <span class="description">Total (Cents)</span>
+              <span class="value">{checkoutDetails.amount_total}</span>
             </div>
           </div>
-        ) : (
-          <p>Loading checkout details...</p>
-        )}
+        </div>
+      ) : (
+        <p className="successPage_p">Loading checkout details...</p>
+      )}
 
-        <br />
-        <button
-          id="download-btn"
-          className="download-btn"
-          onClick={handleDownload}
-        >
-          ⬇️ Download Receipt
-        </button>
-        <br />
-        <br />
-        <p>
-          We received your purchase request & appreciate your business! <br />
-          If you have any questions, please email{" "}
-          <a href="mailto:admin@umiuni.com">admin@umiuni.com</a>.
-        </p>
-      </section>
+      <br />
+      <p className="successPage_p">
+        We received your purchase request & appreciate your business! <br />
+        If you have any questions, please email{" "}
+        <a href="mailto:admin@umiuni.com" className="successPage_a">admin@umiuni.com</a>
+      </p>
     </div>
   );
 };

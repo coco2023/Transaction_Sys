@@ -1,4 +1,4 @@
-[<h1> Please check Full-Stack-stripe-customer-checkout code Here</h1>](/full-stack/)
+# Please check Full-Stack-stripe-customer-checkout code Here: [[Link]](https://github.com/coco2023/Transaction_Sys/tree/main/full-stack)
 
 This project is the order-checkout process using Stripe Payment. 
 
