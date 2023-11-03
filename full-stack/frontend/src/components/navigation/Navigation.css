@@ -1,31 +1,31 @@
 .nav-container {
-    background-color: rgb(250, 135, 145);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-logo {
-    font-size: 2em;
-    font-weight: bold;
-    color: #fff; /* Adjusted text color for contrast */
-  }
-  
-  .nav-menu {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: #fff; /* Adjusted text color for contrast */
-    font-weight: 500;
-    font-size: 0.9em;
-  }
-  
-  .nav-link:hover {
-    color: #f2f2f2; /* Adjusted hover color for visibility */
-  }
-  
+  max-width: 100vw; /* 100% of the viewport width */
+  background-color: rgb(250, 135, 145);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff; /* Adjusted text color for contrast */
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff; /* Adjusted text color for contrast */
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.nav-link:hover {
+  color: #f2f2f2; /* Adjusted hover color for visibility */
+}

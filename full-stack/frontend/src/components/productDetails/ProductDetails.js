@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./styles2.css";
+import "./ProductDetails.css";
 
 const ProductDetails = () => {
   // State for the selected price and custom price
   const [customPrice, setCustomPrice] = useState("");
-  const [totalPrice, setTotalPrice] = useState("1000"); // Default selected value
+  const [totalPrice, setTotalPrice] = useState("666"); // Default selected value
 
   const handlePriceChange = (event) => {
     setTotalPrice(event.target.value);
@@ -24,25 +24,59 @@ const ProductDetails = () => {
     <div className="container">
       <div className="product-image">
         <div className="product-image-small">
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
-          <img src="/assets/img/img_slider/image-slider-1.jpg" alt="Small Image" />
+          <img
+            src="/assets/img/img_slider/20230129183716.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/test-product01.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/20230129183716.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/test-product01.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/20230129183716.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/test-product01.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/20230129183716.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/test-product01.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/20230129183716.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/test-product01.jpg"
+            alt="Small Image"
+          />
+          <img
+            src="/assets/img/img_slider/20230129183716.jpg"
+            alt="Small Image"
+          />
         </div>
         <div className="product-image-overview">
           <img
-            src="/assets/img/img_overview/1.jpg"
+            src="/assets/img/img_overview/img_overview_3.png"
             alt="Small Image"
           />
         </div>
       </div>
+
       <div className="product-info">
         <h1>Donate UmiUni !</h1>
         <span className="rating">
@@ -68,65 +102,141 @@ const ProductDetails = () => {
             ${(totalPrice === "custom" ? customPrice : totalPrice) / 100}
           </p>
 
-          <div className="product-options">
-            <label className="option-label">
-              <input
-                type="radio"
-                name="totalPrice"
-                value="1000"
-                checked={totalPrice === "1000"}
-                onChange={handlePriceChange}
-              />
-              <div className="product-wrapper">
-                <img
-                  src="https://inews.gtimg.com/om_bt/OulEPZqTuYgSUe1sup0B5VtZ7bGeukZjaDuWg0W6VGunkAA/641"
-                  className="product-image-right"
+          <div className="fixed-price-option">
+            <div className="product-options">
+              <label className="option-label">
+                <input
+                  type="radio"
+                  name="totalPrice"
+                  value="100"
+                  checked={totalPrice === "100"}
+                  onChange={handlePriceChange}
                 />
-                <span className="product-description">$10.00</span>
-              </div>
-            </label>
+                <div className="product-wrapper">
+                  <img
+                    src="https://inews.gtimg.com/om_bt/OulEPZqTuYgSUe1sup0B5VtZ7bGeukZjaDuWg0W6VGunkAA/641"
+                    className="product-image-right"
+                  />
+                  <span className="product-description">$1.00</span>
+                </div>
+              </label>
 
-            <label className="option-label">
-              <input
-                type="radio"
-                name="totalPrice"
-                value="5000"
-                checked={totalPrice === "5000"}
-                onChange={handlePriceChange}
-              />
-              <div className="product-wrapper">
-                <img
-                  src="http://pic.enorth.com.cn/005/007/154/00500715496_e4b9c075.png"
-                  alt="Brown Bag"
-                  className="product-image-right"
+              <label className="option-label">
+                <input
+                  type="radio"
+                  name="totalPrice"
+                  value="300"
+                  checked={totalPrice === "300"}
+                  onChange={handlePriceChange}
                 />
-                <span className="product-description">$50.00</span>
-              </div>
-            </label>
+                <div className="product-wrapper">
+                  <img
+                    src="http://pic.enorth.com.cn/005/007/154/00500715496_e4b9c075.png"
+                    alt="Brown Bag"
+                    className="product-image-right"
+                  />
+                  <span className="product-description">$3.00</span>
+                </div>
+              </label>
 
-            <label className="option-label">
-              <input
-                type="radio"
-                name="totalPrice"
-                value="10000"
-                checked={totalPrice === "10000"}
-                onChange={handlePriceChange}
-              />
-              <div className="product-wrapper">
-                <img
-                  src="https://inews.gtimg.com/om_bt/OulEPZqTuYgSUe1sup0B5VtZ7bGeukZjaDuWg0W6VGunkAA/641"
-                  alt="test-pic"
-                  className="product-image-right"
+              <label className="option-label">
+                <input
+                  type="radio"
+                  name="totalPrice"
+                  value="500"
+                  checked={totalPrice === "500"}
+                  onChange={handlePriceChange}
                 />
-                <span className="product-description">$100.00</span>
-              </div>
-            </label>
+                <div className="product-wrapper">
+                  <img
+                    src="https://inews.gtimg.com/om_bt/OulEPZqTuYgSUe1sup0B5VtZ7bGeukZjaDuWg0W6VGunkAA/641"
+                    alt="test-pic"
+                    className="product-image-right"
+                  />
+                  <span className="product-description">$5.00</span>
+                </div>
+              </label>
 
-            <div className="option-label custom-price-option">
+              <label className="option-label">
+                <input
+                  type="radio"
+                  name="totalPrice"
+                  value="666"
+                  checked={totalPrice === "666"}
+                  onChange={handlePriceChange}
+                />
+                <div className="product-wrapper">
+                  <img
+                    src="http://pic.enorth.com.cn/005/007/154/00500715496_e4b9c075.png"
+                    className="product-image-right"
+                  />
+                  <span className="product-description">$6.66</span>
+                </div>
+              </label>
+            </div>
+
+            <div className="product-options">
+              <label className="option-label">
+                <input
+                  type="radio"
+                  name="totalPrice"
+                  value="1000"
+                  checked={totalPrice === "1000"}
+                  onChange={handlePriceChange}
+                />
+                <div className="product-wrapper">
+                  <img
+                    src="http://pic.enorth.com.cn/005/007/154/00500715496_e4b9c075.png"
+                    alt="Brown Bag"
+                    className="product-image-right"
+                  />
+                  <span className="product-description">$10.00</span>
+                </div>
+              </label>
+
+              <label className="option-label">
+                <input
+                  type="radio"
+                  name="totalPrice"
+                  value="10000"
+                  checked={totalPrice === "10000"}
+                  onChange={handlePriceChange}
+                />
+                <div className="product-wrapper">
+                  <img
+                    src="https://inews.gtimg.com/om_bt/OulEPZqTuYgSUe1sup0B5VtZ7bGeukZjaDuWg0W6VGunkAA/641"
+                    alt="test-pic"
+                    className="product-image-right"
+                  />
+                  <span className="product-description">$100.00</span>
+                </div>
+              </label>
+
+              <label className="option-label">
+                <input
+                  type="radio"
+                  name="totalPrice"
+                  value="5000"
+                  checked={totalPrice === "5000"}
+                  onChange={handlePriceChange}
+                />
+                <div className="product-wrapper">
+                  <img
+                    src="http://pic.enorth.com.cn/005/007/154/00500715496_e4b9c075.png"
+                    alt="Brown Bag"
+                    className="product-image-right"
+                  />
+                  <span className="product-description">$50.00</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div className="custom-price-option-wrapper">
+            <div className="custom-price-option">
               <div className="custom-price-container">
                 <label htmlFor="customPrice" className="custom-price-label">
-                  Customize Price ($ cent)
-                  <br />
+                  <p> Or Customize Your Donate Price ($ cent) </p>
                   <input
                     type="text"
                     id="customPrice"
