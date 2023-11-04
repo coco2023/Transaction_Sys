@@ -31,7 +31,7 @@ node Server.js
 
 4. Demo:
    - product-details-page
-   ![product-details-page](./doc/sys_img/productDetailsPage.png)
+   ![product-details-page](./doc/sys_img/productDetailsPageV0.0.2.png)
    - checkout-page
     ![checkout-page](./stripe-hosted-page-customer-checkout/pic/page-demo/checkout-page.png)
    - successfully-checkout-page
