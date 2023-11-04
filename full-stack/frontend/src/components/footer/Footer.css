@@ -1,0 +1,54 @@
+.footer-container {
+    background-color: #f8822e ; /** #f88b2e #f8712e; #f8712e**/
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section h4 {
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.security-certification img,
+.payment-acceptance img {
+    margin-right: 10px;
+}
+
+.footer-legal {
+    text-align: center;
+}
+
+.footer-legal p,
+.footer-legal a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}

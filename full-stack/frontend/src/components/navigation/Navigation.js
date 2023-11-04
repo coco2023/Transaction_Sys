@@ -6,6 +6,8 @@ const Navigation = () => {
   const couponMessage =
     "🎉 Free Shipping on orders over $50 - Use code: FREESHIP 🎉";
 
+    const searchingIcon = "/assets/img/svg/searching.svg";
+
   return (
     <div className="top-bar">
       <div className="coupon-message" data-content={couponMessage}>
@@ -19,6 +21,7 @@ const Navigation = () => {
         <div className="nav-search">
           <input className="search-input" type="text" placeholder="Search..." />
           <button className="search-button">🔍</button>
+          {/* <img className="search-button" src={searchingIcon} alt="Previous" /> */}
         </div>
 
         <div className="nav-menu">

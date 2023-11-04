@@ -6,6 +6,7 @@ import CancelPage from './components/canclePage/CancelPage';
 import Navigation from './components/navigation/Navigation';
 import SuccessPage from './components/successPage/SuccessPage';
 import Prac from './components/prac/prac';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -13,11 +14,13 @@ function App() {
       <Navigation /> {/* Use the Navigation component */}
 
       <Routes> {/* Notice 'Routes' used here instead of 'Switch' */}
-        <Route path="/" element={<ProductDetails />} />
+        <Route path="/" element={<ProductDetails />} />3
         <Route path="/cancel" element={<CancelPage />} />
         <Route path='/success' element={<SuccessPage />} />
         <Route path='/prac' element={<Prac />} />
       </Routes>
+      
+      <Footer />
     </Router>
   );
 }
