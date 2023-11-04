@@ -5,6 +5,18 @@ const ProductDetails = () => {
   // State for the selected price and custom price
   const [customPrice, setCustomPrice] = useState("");
   const [totalPrice, setTotalPrice] = useState("666"); // Default selected value
+  const initImage = "/assets/img/img_slider/test-product01.jpg";
+  const [activeImage, setActiveImage] = useState(initImage);
+
+  const images = [
+    "/assets/img/img_slider/20230129183716.jpg",
+    "/assets/img/img_slider/test-product01.jpg",
+  ];
+
+  // Function to change the active image
+  const handleImageClick = (newImage) => {
+    setActiveImage(newImage);
+  };
 
   const handlePriceChange = (event) => {
     setTotalPrice(event.target.value);
@@ -27,53 +39,62 @@ const ProductDetails = () => {
           <img
             src="/assets/img/img_slider/20230129183716.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[0])}
           />
           <img
             src="/assets/img/img_slider/test-product01.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[1])}
           />
           <img
             src="/assets/img/img_slider/20230129183716.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[0])}
           />
           <img
             src="/assets/img/img_slider/test-product01.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[1])}
           />
           <img
             src="/assets/img/img_slider/20230129183716.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[0])}
           />
           <img
             src="/assets/img/img_slider/test-product01.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[1])}
           />
           <img
             src="/assets/img/img_slider/20230129183716.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[0])}
           />
           <img
             src="/assets/img/img_slider/test-product01.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[1])}
           />
           <img
             src="/assets/img/img_slider/20230129183716.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[0])}
           />
           <img
             src="/assets/img/img_slider/test-product01.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[1])}
           />
           <img
             src="/assets/img/img_slider/20230129183716.jpg"
             alt="Small Image"
+            onClick={() => handleImageClick(images[0])}
           />
         </div>
+        
         <div className="product-image-overview">
-          <img
-            src="/assets/img/img_overview/img_overview_3.png"
-            alt="Small Image"
-          />
+          <img src={activeImage} alt="Small Image" />
         </div>
       </div>
 
