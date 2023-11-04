@@ -5,17 +5,40 @@ const ProductDetails = () => {
   // State for the selected price and custom price
   const [customPrice, setCustomPrice] = useState("");
   const [totalPrice, setTotalPrice] = useState("666"); // Default selected value
-  const initImage = "/assets/img/img_slider/test-product01.jpg";
-  const [activeImage, setActiveImage] = useState(initImage);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const leftArrowIcon = "/assets/img/svg/leftArrowIcon.svg";
+  const rightArrowIcon = "/assets/img/svg/rightArrowIcon.svg";
 
   const images = [
+    "/assets/img/img_overview/img_overview_3.png",
     "/assets/img/img_slider/20230129183716.jpg",
     "/assets/img/img_slider/test-product01.jpg",
+    "/assets/img/img_slider/20230129183716.jpg",
+    "/assets/img/img_slider/test-product01.jpg",
+    "/assets/img/img_slider/20230129183716.jpg",
+    "/assets/img/img_slider/test-product01.jpg",
+    "/assets/img/img_overview/img_overview_1.png",
   ];
 
-  // Function to change the active image
-  const handleImageClick = (newImage) => {
-    setActiveImage(newImage);
+  // Function to change the active image index
+  const changeImage = (index) => {
+    if (index >= 0 && index < images.length) {
+      setActiveIndex(index);
+    }
+  };
+
+  // Function to go to the previous image
+  const goPrev = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Function to go to the next image
+  const goNext = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const handlePriceChange = (event) => {
@@ -36,68 +59,34 @@ const ProductDetails = () => {
     <div className="container">
       <div className="product-image">
         <div className="product-image-small">
-          <img
-            src="/assets/img/img_slider/20230129183716.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[0])}
-          />
-          <img
-            src="/assets/img/img_slider/test-product01.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[1])}
-          />
-          <img
-            src="/assets/img/img_slider/20230129183716.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[0])}
-          />
-          <img
-            src="/assets/img/img_slider/test-product01.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[1])}
-          />
-          <img
-            src="/assets/img/img_slider/20230129183716.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[0])}
-          />
-          <img
-            src="/assets/img/img_slider/test-product01.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[1])}
-          />
-          <img
-            src="/assets/img/img_slider/20230129183716.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[0])}
-          />
-          <img
-            src="/assets/img/img_slider/test-product01.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[1])}
-          />
-          <img
-            src="/assets/img/img_slider/20230129183716.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[0])}
-          />
-          <img
-            src="/assets/img/img_slider/test-product01.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[1])}
-          />
-          <img
-            src="/assets/img/img_slider/20230129183716.jpg"
-            alt="Small Image"
-            onClick={() => handleImageClick(images[0])}
-          />
+          {images.map((src, index) => (
+            <img
+              key={src}
+              src={src}
+              alt="Small Product"
+              className={activeIndex === index ? "active" : ""}
+              onClick={() => changeImage(index)}
+            />
+          ))}
         </div>
-        
-        <div className="product-image-overview">
-          <img src={activeImage} alt="Small Image" />
+
+        <div className="product-image-overview-wrapper">
+          {/* Left arrow */}
+          <button onClick={goPrev} className="arrow-button left-arrow">
+            <img src={leftArrowIcon} alt="Previous" />
+          </button>
+
+          <div className="product-image-overview">
+            <img src={images[activeIndex]} alt="Product Overview" />
+          </div>
+
+          {/* Right arrow */}
+          <button onClick={goNext} className="arrow-button right-arrow">
+            <img src={rightArrowIcon} alt="Next" />
+          </button>
         </div>
       </div>
-
+      
       <div className="product-info">
         <h1>Donate UmiUni !</h1>
         <span className="rating">
