@@ -13,9 +13,9 @@ const ProductDetails = () => {
     "/assets/img/img_overview/img_overview_3.png",
     "/assets/img/img_slider/20230129183716.jpg",
     "/assets/img/img_slider/test-product01.jpg",
+    "/assets/img/img_overview/img_overview_2.png",
     "/assets/img/img_slider/20230129183716.jpg",
-    "/assets/img/img_slider/test-product01.jpg",
-    "/assets/img/img_slider/20230129183716.jpg",
+    "/assets/img/img_overview/1.jpg",
     "/assets/img/img_slider/test-product01.jpg",
     "/assets/img/img_overview/img_overview_1.png",
   ];
@@ -71,6 +71,7 @@ const ProductDetails = () => {
         </div>
 
         <div className="product-image-overview-wrapper">
+
           {/* Left arrow */}
           <button onClick={goPrev} className="arrow-button left-arrow">
             <img src={leftArrowIcon} alt="Previous" />
@@ -84,9 +85,10 @@ const ProductDetails = () => {
           <button onClick={goNext} className="arrow-button right-arrow">
             <img src={rightArrowIcon} alt="Next" />
           </button>
+
         </div>
       </div>
-      
+
       <div className="product-info">
         <h1>Donate UmiUni !</h1>
         <span className="rating">

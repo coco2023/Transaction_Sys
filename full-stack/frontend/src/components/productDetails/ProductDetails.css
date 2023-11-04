@@ -323,13 +323,28 @@ input[type="text"] {
   top: 50%;
   transform: translateY(-50%);
   background: none;
-  border: none;
+  border: 2px solid transparent; /* Makes border invisible initially */
+  border-radius: 50%; /* Makes the border circular */
+  padding: 5px; /* Adjust the padding to size the circular area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
   cursor: pointer;
   z-index: 10; /* To make sure arrows are clickable above the image */
 }
 
+.arrow-button img {
+  display: block;
+}
+
 .left-arrow {
   left: 10px;
+}
+
+.arrow-button:hover {
+  border: 2px rgba(255, 255, 255, 0.5); 
+  background-color: rgba(255, 255, 255, 0.5); /* Optional: slight white background */
 }
 
 .right-arrow {
