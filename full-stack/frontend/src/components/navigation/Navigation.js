@@ -13,10 +13,6 @@ const Navigation = () => {
       </div>
 
       <div className="nav-container">
-        {/* <div className="top-bar">
-        <div className="coupon-message">
-          <p>🎉 Free Shipping on orders over $50 - Use code: FREESHIP 🎉</p>
-        </div> */}
 
         <div className="nav-logo">UmiUni</div>
 
